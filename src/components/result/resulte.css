@@ -1,0 +1,104 @@
+.result {
+  background-color: #009688;
+  /* position: fixed; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%,-50%); */
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  h3 {
+    font-size: 25px;
+    margin: 0;
+  }
+  p {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
+}
+
+.link-to-quiz-page {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: fit-content;
+  padding: 5px 10px;
+  /* text-decoration: none; */
+  border-radius: 5px;
+}
+.show-wrong {
+  display: block;
+  padding: 5px 10px;
+  margin-top: 20px;
+  font-family: Cairo;
+  background-color: #e91e63;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.wrongs-answer {
+  transition: 1s;
+}
+.wrongs-answer.disabled {
+  height: 0 !important;
+}
+
+.container-wrong-quiz {
+  background-color: #a0a0a0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  p {
+    /* font-size: px; */
+    letter-spacing: 1px;
+  }
+  span.false {
+    background-color: red;
+  }
+  span.true {
+    background-color: #009688;
+  }
+}
+
+.the-wrong-answer{
+  background-color: red;
+}
+.the-correct-answer{
+  background-color: #009688;
+}
+.testDiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  gap: 5%;
+  margin: auto;
+  @media (max-width: 767px) {
+    & {
+      width: 100%;
+    }
+  }
+  p {
+    width: 45%;
+    text-align: center;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+}
