@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <>
       <div className="home">
-        <div className="title">
+        <div className="title-home">
           <img className="img-home" src="./logo-transparent.webp" alt="logo" />
           <h1>مدارس منارات تبوك الأهلية</h1>
         </div>

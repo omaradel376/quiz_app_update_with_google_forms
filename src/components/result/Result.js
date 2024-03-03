@@ -91,7 +91,7 @@ function Result(props) {
               })}
             </div>
             {wrong[key].yourSelect === undefined ? (
-              <p>"لم تقم بحل هذا السؤال"</p>
+              <p className="not-solve">"لم تقم بحل هذا السؤال"</p>
             ) : null}
           </div>
         ))}

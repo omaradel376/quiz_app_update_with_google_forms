@@ -1,13 +1,13 @@
 .container-of-quizes.disabled {
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.257);
-  }
+}
+.container-of-quizes.disabled::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.257);
 }
 .overLay {
   width: 100vw;
@@ -17,11 +17,10 @@
   background-color: rgba(0, 0, 0, 0.425);
   position: fixed;
 }
-
 .card {
   width: 300px;
   height: 255px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -33,69 +32,62 @@
   z-index: 100;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
 }
-
-
 .cookieHeading {
   font-size: 18px;
   font-weight: 800;
-  color: rgb(26, 26, 26);
+  color: #1a1a1a;
 }
-
 .cookieDescription {
   text-align: center;
   font-weight: 600;
-  color: rgb(99, 99, 99);
+  color: #636363;
 }
 .buttonContainer {
   display: flex;
   gap: 20px;
   flex-direction: row;
 }
-
 .acceptButton {
   width: 80px;
   display: block;
   text-align: center;
   height: 30px;
   background-color: #7b57ff;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   border: none;
-  color: rgb(241, 241, 241);
+  color: #f1f1f1;
   cursor: pointer;
   font-weight: 600;
   border-radius: 20px;
   box-shadow: 0 4px 6px -1px #977ef3, 0 2px 4px -1px #977ef3;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
   font-family: Cairo;
 }
-
 .declineButton {
   width: 80px;
   height: 30px;
   background-color: #dadada;
-  transition-duration: .2s;
-  color: rgb(46, 46, 46);
+  transition-duration: 0.2s;
+  color: #2e2e2e;
   border: none;
   cursor: pointer;
   font-weight: 600;
   border-radius: 20px;
   box-shadow: 0 4px 6px -1px #bebdbd, 0 2px 4px -1px #bebdbd;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
   font-family: Cairo;
 }
-
 .declineButton:hover {
   background-color: #ebebeb;
   box-shadow: 0 10px 15px -3px #bebdbd, 0 4px 6px -2px #bebdbd;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
 }
-
 .acceptButton:hover {
   background-color: #9173ff;
   box-shadow: 0 10px 15px -3px #977ef3, 0 4px 6px -2px #977ef3;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
 }
