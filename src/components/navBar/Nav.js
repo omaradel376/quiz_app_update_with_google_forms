@@ -1,5 +1,5 @@
 import "./nav.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 function Nav() {
@@ -10,8 +10,8 @@ function Nav() {
           <div className="logo"><Link to="/"><img width="50" height="50" src="../logo-transparent.webp" alt="logo"></img></Link></div>
           <nav>
             <ul className="links">
-              <li><Link to="/">الصفحة الرئيسية</Link></li>
-              <li><Link to="الاختبارات">الاختبارات</Link></li>
+              <li><NavLink to="/">الصفحة الرئيسية</NavLink></li>
+              <li><NavLink to="الاختبارات">الاختبارات</NavLink></li>
             </ul>
           </nav>
         </div>

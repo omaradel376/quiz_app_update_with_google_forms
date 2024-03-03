@@ -4,7 +4,7 @@
 }
 header {
   background-color: #009688;
- /* margin-bottom: 20px;
+  /* margin-bottom: 20px;
   */
   padding: 10px;
   min-height: 82px;
@@ -18,7 +18,7 @@ header .container {
   header .container {
     flex-direction: column;
     text-align: center;
- }
+  }
 }
 header .logo {
   display: flex;
@@ -42,5 +42,9 @@ header ul.links li a {
 }
 header ul.links li a:hover {
   border-radius: 5px;
-  background-color: #f44336;
+  background-color: #777;
+}
+a.active {
+  background-color: #333;
+  border-radius: 2px;
 }
