@@ -8,6 +8,7 @@ import ExamesPages from "./components/examesPage/ExamesPage"; // the page that c
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/homePage/HomePage";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
