@@ -3,7 +3,7 @@ import "./examesPage.css";
 import exames from "../../examesData.json";
 function ExamesPages() {
   // fix this is a import for select the exam that will show from json file
-  localStorage.setItem("idOfExam", 0);
+  // localStorage.setItem("idOfExam", 0);
   return (
     <div className="quizes-page">
       <div className="container">
@@ -15,7 +15,7 @@ function ExamesPages() {
               <p>الدرجة النهائية: {exam.max}</p>
               <Link
                 onClick={() => {
-                  localStorage.setItem("idOfExam", exam.id - 1);
+                  // localStorage.setItem("idOfExam", exam.id - 1);
                 }}
                 to={`/الاختبار/${exam.id}`}
                 className="button-in-quizes-page"

@@ -3,7 +3,12 @@ import exames from "../../examesData.json";
 import { useEffect, useState } from "react";
 import "./containerOfQuiz.css";
 import Result from "../result/Result";
+import { useParams } from "react-router-dom";
 function ContainerOfQuiz() {
+  
+  let { id } = useParams() //fix very important
+
+
   let [clicking, setClicking] = useState(false);
   let [sResult, setResult] = useState(false);
   // this is a card alert for end the exam
@@ -55,11 +60,12 @@ function ContainerOfQuiz() {
   let [correctAnswers, setCorrectAnswers] = useState({});
   useEffect(() => {
     const newCorrectAnswers = {};
-    exames[localStorage.getItem("idOfExam")].emax.forEach((answer) => {
+    // exames[localStorage.getItem("idOfExam")].emax.forEach((answer) => {
+    exames[id - 1].emax.forEach((answer) => {
       newCorrectAnswers[`answer-${answer.id}`] = answer.theCorrect;
     });
     setCorrectAnswers(newCorrectAnswers);
-  }, []);
+  }, [id]);
   let [correctState, setCorrect] = useState(0);
   // checking the answer of user and make varible one for correct and other for uncorrect and increese them when user select right or false
   const checking = () => {
@@ -82,7 +88,7 @@ function ContainerOfQuiz() {
   return (
     <>
       <div className="container-of-quizes" style={{ marginTop: "20px" }}>
-        {exames[localStorage.getItem("idOfExam")].emax.map((quiz) => {
+        {exames[id - 1].emax.map((quiz) => {
           return (
             // this is a quiz input
             <QuizOfExam
@@ -121,7 +127,7 @@ function ContainerOfQuiz() {
       </div>
       {sResult === true ? (
         <Result
-          array={exames[localStorage.getItem("idOfExam")].emax}
+          array={exames[id - 1].emax}
           correct={correctState}
           userAnswer={userAnswers}
           correctAnswer={correctAnswers}
