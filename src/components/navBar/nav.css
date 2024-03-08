@@ -28,10 +28,21 @@ header .logo {
 header ul.links {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  header ul.links {
+    margin: 10px 0;
+  }
 }
 header ul.links li {
   display: inline-block;
   margin-left: 20px;
+}
+@media (max-width: 600px) {
+  header ul.links li {
+    margin-left: 5px;
+  }
 }
 header ul.links li a {
   text-decoration: none;
@@ -39,6 +50,12 @@ header ul.links li a {
   font-weight: bold;
   padding: 5px;
   transition: 0.3s;
+}
+@media (max-width: 600px) {
+  header ul.links li a {
+    font-size: 14px;
+    padding: 3px;
+  }
 }
 header ul.links li a:hover {
   border-radius: 5px;

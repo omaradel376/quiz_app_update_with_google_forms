@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import ContainerOfQuiz from "./components/containerOfQuiz/ContainerOfQuiz"; // container of quiz
 import ExamesPages from "./components/examesPage/ExamesPage"; // the page that container the exames
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/homePage/HomePage";
-
+import ShowDegree from "./components/showDegree/ShowDegree";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const router = createBrowserRouter([
   {
@@ -23,9 +26,8 @@ const router = createBrowserRouter([
         element: <ExamesPages />,
       },
       {
-        // path: "/الاختبار",
-        path: "/الاختبار/:id",
-        element: <ContainerOfQuiz />,
+        path: "/الدرجات",
+        element: <ShowDegree />,
       },
     ],
   },
@@ -34,12 +36,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
