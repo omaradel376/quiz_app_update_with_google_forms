@@ -1,14 +1,9 @@
 [
   {
     "id": 1,
-    "titleOfExam": "الاختبار الأول",
-    "link": "https://forms.gle/s2Q6jFknYqEuBUkc9",
-    "linkDegrees": "https://docs.google.com/spreadsheets/d/18P7D1OKRkl8_U-VT3A2XWn3dzmx26Tvdmb2VFSOUIks/edit?resourcekey#gid=710628795"
-  },
-  {
-    "id": 2,
-    "titleOfExam": "الاختبار الثاني",
-    "link": "https://forms.gle/8Gr6TQ9ensB9geyW8",
-    "linkDegrees": "https://docs.google.com/spreadsheets/d/13qXQn0hGqNjFiSgNoGH3GqfvgBYagwJpwPfbzBtWfJc/edit?resourcekey#gid=1415026414"
+    "titleOfExam": "ثاني ثانوي الدور الأول",
+    "link": "https://forms.gle/dZwn7Gng4Dm7JHhUA",
+    "linkImg": "./qr_codes/QR_Exam_1.png",
+    "linkDegrees": "https://docs.google.com/spreadsheets/d/17lSEohuLju8ox2ioOBP_391FxPUcBi-eXpFP9DLtQQU/edit?resourcekey#gid=785389260"
   }
 ]

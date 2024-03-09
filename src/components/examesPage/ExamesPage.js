@@ -8,6 +8,10 @@ function ExamesPages() {
           return (
             <div className="box-quiz" key={exam.id}>
               <h2>{exam.titleOfExam}</h2>
+              <div className="qr-code mt-4" >
+                <h3>الباركود</h3>
+                <img src={exam.linkImg} alt="QR_Code"></img>
+              </div>
               <a
                 href={exam.link}
                 target="_black"
