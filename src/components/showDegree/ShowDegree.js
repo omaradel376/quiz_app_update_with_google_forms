@@ -5,7 +5,9 @@ import degree from "../../degree.json";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { changeStateToinputValue } from "../../store/slices/pass-slice.js";
-import exams from "../../examesData.json";
+import exams from "../../examesDataClassTwo.json";
+import DegreeBoxInfo from "./DegreeBoxInfo.js";
+import { NavLink, Outlet } from "react-router-dom";
 
 function ShowDegree() {
   let [email, setEmail] = useState();
@@ -28,21 +30,18 @@ function ShowDegree() {
       <div className="container">
         {isEmailTrue && isPassTrue ? (
           // if email and password is correct
-          exams.map((exam) => {
-            return (
-              <div className="degrees-links" key={exam.id}>
-                <h2>{exam.titleOfExam}</h2>
-                <a
-                  className="link-to-degree"
-                  target="_blank"
-                  rel="noreferrer"
-                  href={exam.linkDegrees}
-                >
-                  اضغط لعرض النتائج
-                </a>
-              </div>
-            );
-          })
+          <>
+          
+          <ul className="ul-links-classes">
+          <li>
+            <NavLink to="الاول الثانوي"> اول ثانوي</NavLink>
+          </li>
+          <li>
+            <NavLink to="الثاني الثانوي"> ثاني ثانوي</NavLink>
+          </li>
+        </ul>
+        <Outlet />
+          </>
         ) : (
           // if email and password is wrong
           <Form

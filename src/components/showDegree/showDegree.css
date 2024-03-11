@@ -19,9 +19,9 @@
   padding: 10px;
 }
 .container {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 5%;
+  gap: 5%; */
 }
 .degrees-links {
   background-color: #eee;
@@ -69,4 +69,9 @@
 .link-to-degree:hover {
   border-radius: 5px;
   background-color: #009688;
+}
+.container-box-degree-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
 }
