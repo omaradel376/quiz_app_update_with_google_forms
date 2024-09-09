@@ -6,7 +6,7 @@ function HomePage() {
       <div className="home">
         <div className="title-home">
           <img className="img-home" src="./logo-transparent.webp" alt="logo" />
-          <h2 className="ramadan">مسابقة تحدي القدرات الرمضانية ١٤٤٥ هـ</h2>
+          <h2 className="ramadan">اختبارات قياس للقدرات والتحصيلي</h2>
           <h1>مدارس منارات تبوك الأهلية</h1>
         </div>
 
